@@ -12,7 +12,19 @@ class CreateParkingsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('parkings', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('tarifa');
+            $table->string('hora_apertura');
+            $table->string('hora_cierre');
+            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('lat');
+            $table->string('long');
+            $table->string('celdas');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +34,6 @@ class CreateParkingsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('parkings');
     }
 }

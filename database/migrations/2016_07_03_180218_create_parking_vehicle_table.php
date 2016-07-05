@@ -12,7 +12,7 @@ class CreateParkingVehicleTable extends Migration
      */
     public function up()
     {
-        Schema::create('parking_vehicle', function (Blueprint $table) {
+        Schema::create('parking_vehicletype', function (Blueprint $table) {
             $table->integer('parking_id');
             $table->integer('tipo_vehiculo_id');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateParkingVehicleTable extends Migration
      */
     public function down()
     {
-        Schema::drop('parking_vehicle');
+        Schema::drop('parking_vehicletype');
     }
 }

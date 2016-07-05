@@ -19,3 +19,10 @@ $factory->define(Parking\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(Parking\VehicleTypes::class, function (Faker\Generator $faker) {
+    return [
+        'nombre'        => $faker->name,
+        'img'         => $faker->imageUrl(200, 200, 'food', true, 'Faker'),
+    ];
+});

@@ -19,7 +19,7 @@ class VehicleTypesParkingTransformer extends TransformerAbstract
         return [
             'id' => $vehicleTypes->id,
             'nombre' => $vehicleTypes->nombre,
-            'imagen' => $vehicleTypes->imagen,
+            'imagen' => $vehicleTypes->img,
             'parquederos' => $vehicleTypes->parkings,
         ];
     }

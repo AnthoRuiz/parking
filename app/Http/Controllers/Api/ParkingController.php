@@ -46,6 +46,7 @@ class ParkingController extends Controller
             $parking->lat = $data['lat'];
             $parking->long = $data['long'];
             $parking->celdas = $data['celdasDisponibles'];
+            
             $typeVehicles  = $data['tipoVehiculos'];
             $arrayTypeVehicles = explode(",", $typeVehicles);
 

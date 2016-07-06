@@ -15,6 +15,7 @@ class VehicleTypes extends Model
     public function parkings()
     {
         return $this->belongsToMany('Parking\Parking', 'parking_vehicletype',
-            'parking_id', 'tipo_vehiculo_id');
+            'tipo_vehiculo_id', 'parking_id');
+
     }
 }

@@ -22,7 +22,7 @@ class ParkingController extends Controller
 
     public function index()
     {
-        return $this->response->paginator(Parking::paginate(5), new ParkingTransformer());
+        return $this->response->collection(Parking::all(), new ParkingTransformer());
     }
 
     public function store(Requests\CreateParkingRequest $request)

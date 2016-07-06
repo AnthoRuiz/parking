@@ -20,14 +20,14 @@ class VehicleTypesController extends Controller
 
     public function index()
     {
-        return $this->response->paginator(VehicleTypes::paginate(5), new VehicleTypesTransformer());
+        return $this->response->collection(VehicleTypes::all(), new VehicleTypesTransformer());
     }
 
     public function findParkingByVehicle(Requests\FindParkinByVehiclegRequest $request)
     {
         try{
             $data = $request->all();
-            $vehicleType = VehicleTypes::where('nombre', $data['tipoVehiculo'])->firstOrFail();
+            $vehicleType = VehicleTypes::where('id', $data['tipoVehiculo'])->firstOrFail();
             //dd($vehicleType->parkings());
             if(!empty($vehicleType)){
                 return $this->response->item($vehicleType, new VehicleTypesParkingTransformer());

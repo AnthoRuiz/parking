@@ -24,7 +24,7 @@ class FindParkinByVehiclegRequest extends Request
     public function rules()
     {
         return [
-            'tipoVehiculo'=> 'required|max:255',
+            'tipoVehiculo'=> 'required|integer',
             //'tarifa'=> 'required'
         ];
     }

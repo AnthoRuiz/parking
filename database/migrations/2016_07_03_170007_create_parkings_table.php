@@ -34,6 +34,6 @@ class CreateParkingsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('parkings');
+        Schema::dropIfExists('parkings');
     }
 }

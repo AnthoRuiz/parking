@@ -12,7 +12,8 @@ class TypeVehiclesTableSeeder extends Seeder
      */
     public function run()
     {
-        VehicleTypes::truncate();
+
+	VehicleTypes::truncate();
 
         factory(Parking\VehicleTypes::class)->create([
         	'nombre' => 'BICICLETA',

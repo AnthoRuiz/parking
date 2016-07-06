@@ -26,6 +26,6 @@ class CreateParkingVehicleTable extends Migration
      */
     public function down()
     {
-        Schema::drop('parking_vehicletype');
+        Schema::dropIfExists('parking_vehicletype');
     }
 }

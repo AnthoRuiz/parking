@@ -43,8 +43,8 @@ class ParkingController extends Controller
 
             $parking->direccion = $data['direccion'];
             $parking->telefono = $data['telefono'];
-            $parking->lat = $data['lat'];
-            $parking->long = $data['long'];
+            $parking->latitud = $data['lat'];
+            $parking->longitud = $data['long'];
             $parking->celdas = $data['celdasDisponibles'];
             
             $typeVehicles  = $data['tipoVehiculos'];

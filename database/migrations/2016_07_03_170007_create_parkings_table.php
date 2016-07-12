@@ -18,10 +18,11 @@ class CreateParkingsTable extends Migration
             $table->string('tarifa');
             $table->string('hora_apertura');
             $table->string('hora_cierre');
+            $table->String('horario');
             $table->string('direccion');
             $table->string('telefono');
-            $table->string('lat');
-            $table->string('long');
+            $table->string('latitud');
+            $table->string('longitud');
             $table->string('celdas');
             $table->timestamps();
         });

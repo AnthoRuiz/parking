@@ -26,3 +26,9 @@ $factory->define(Parking\VehicleTypes::class, function (Faker\Generator $faker) 
         'img'         => $faker->imageUrl(200, 200, 'food', true, 'Faker'),
     ];
 });
+
+$factory->define(Parking\Parking::class, function (Faker\Generator $faker) {
+    return [
+        'nombre'        => $faker->name,
+    ];
+});

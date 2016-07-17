@@ -32,3 +32,9 @@ $factory->define(Parking\Parking::class, function (Faker\Generator $faker) {
         'nombre'        => $faker->name,
     ];
 });
+
+$factory->define(Parking\ParkingVehicleType::class, function (Faker\Generator $faker) {
+    return [
+        'celdas'        => $faker->name,
+    ];
+});

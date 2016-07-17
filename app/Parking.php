@@ -14,8 +14,9 @@ class Parking extends Model
 
     public function typeVehicles()
     {
-        return $this->belongsToMany('Parking\VehicleTypes','parking_vehicletype',
-            'parking_id', 'tipo_vehiculo_id');
+        return $this->belongsToMany('Parking\VehicleTypes','parking_vehicletype')
+            ->withPivot('parking_id', 'celdas');
     }
 
 }
+

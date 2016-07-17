@@ -34,29 +34,25 @@ class ParkingController extends Controller
 
             $parking->nombre = $data['nombre'];
             $parking->tarifa = $data['tarifa'];
+            $parking->horario = $data['horario'];
 
-            $horaApertura = new Carbon($data['horaApertura']);
+            /*$horaApertura = new Carbon($data['horaApertura']);
             $parking->hora_apertura = $horaApertura->format("H:i:s");
 
             $horaCierre = new Carbon($data['horaCierre']);
-            $parking->hora_cierre = $horaCierre->format("H:i:s");
+            $parking->hora_cierre = $horaCierre->format("H:i:s");*/
 
             $parking->direccion = $data['direccion'];
             $parking->telefono = $data['telefono'];
             $parking->latitud = $data['lat'];
             $parking->longitud = $data['long'];
-            $parking->celdas = $data['celdasDisponibles'];
-            
-            $typeVehicles  = $data['tipoVehiculos'];
-            $arrayTypeVehicles = explode(",", $typeVehicles);
 
-            foreach ($arrayTypeVehicles as $type) {
-                 VehicleTypes::where('id', $type)->firstOrFail();
-            }
 
-            foreach ($arrayTypeVehicles as $type){
+            foreach ($data['disponibleList'] as $disponible){
+
                     $parking->save();
-                    $parking->typeVehicles()->attach($type);
+                    $parking->typeVehicles()->attach($parking->id,['vehicle_types_id' => $disponible['tipoVehiculo'],
+                                                     'celdas' => $disponible['celdas']]);
             }
 
             return $this->response->array(['message' =>'Creado', 'status' => '200']);

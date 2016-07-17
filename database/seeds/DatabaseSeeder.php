@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(TypeVehiclesTableSeeder::class);
         $this->call(ParkingnsTableSeeder::class);
+        $this->call(ParkingVehicleTypeTableSeeder::class);
 
         Model::reguard();
 

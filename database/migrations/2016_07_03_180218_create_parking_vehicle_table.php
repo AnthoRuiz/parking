@@ -13,8 +13,10 @@ class CreateParkingVehicleTable extends Migration
     public function up()
     {
         Schema::create('parking_vehicletype', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('parking_id');
-            $table->integer('tipo_vehiculo_id');
+            $table->integer('vehicle_types_id');
+            $table->integer('celdas');
             $table->timestamps();
         });
     }

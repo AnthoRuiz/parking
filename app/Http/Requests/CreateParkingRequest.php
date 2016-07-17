@@ -26,14 +26,14 @@ class CreateParkingRequest extends Request
         return [
             'nombre'=> 'required|max:255',
             'tarifa'=> 'required',
-            'horaApertura'=> 'required',
-            'horaCierre'=> 'required',
+            'horario'=> 'required',
+            //'horaApertura'=> 'required',
+            //'horaCierre'=> 'required',
             'direccion'=> 'required|max:255',
             'telefono'=> 'required|max:255',
             'lat'=> 'required|max:255',
             'long'=> 'required|max:255',
-            'celdasDisponibles'=> 'required|max:255',
-            'tipoVehiculos' => 'required|max:255',
+            'disponibleList'=> 'required|max:255',
         ];
     }
 }

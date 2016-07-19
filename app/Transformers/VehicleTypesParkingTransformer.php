@@ -20,8 +20,10 @@ class VehicleTypesParkingTransformer extends TransformerAbstract
             'id' => $vehicleTypes->id,
             'nombre' => $vehicleTypes->nombre,
             'imagen' => $vehicleTypes->img,
-            'parquederos' => $vehicleTypes->parkings,
+            'parquederos' => $vehicleTypes->parkings
         ];
     }
 
 }
+
+//$student = $poll->students()->where('students.id', '=', Input::get('student_id'))->first();

@@ -17,6 +17,7 @@ class CreateParkingVehicleTable extends Migration
             $table->integer('parking_id');
             $table->integer('vehicle_types_id');
             $table->integer('celdas');
+            $table->integer('total');
             $table->timestamps();
         });
     }
